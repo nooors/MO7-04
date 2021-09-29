@@ -8,28 +8,34 @@ body {
     height: 100vh;
 }
 
-.container {
+.rating {
     height         : 100vh;
     display        : flex;
-    flex-direction : row-reverse;
+    flex-flow: nowrap row-reverse;
     justify-content: center;
     align-items    : center;
 }
 
-input {
-    opacity: 0;
+.star__icon {
+    cursor: pointer;
 }
 
-label {
-    color    : hsl(0, 0%, 20%);
-    font-size: 3rem;
-    transition: all .3s;
+.star__icon.far.fa-star {
+    color: rgb(255, 189, 6);
+}
+
+.star__icon.fas.fa-star {
+    color: rgb(255, 218, 6);
+    text-shadow: 1px 1px 6px hsl(49, 90%, 70%),
+        -1px -1px 6px hsl(49, 90%, 70%),
+        -1px 1px 3px hsl(49, 90%, 70%);
 
 }
 
-label:hover~label,
+
+i:hover~i,
 input:focus~label,
-label:hover {
+i:hover {
     color: orange;
     text-shadow: 1px 1px 2px hsl(49, 98%, 50%),
         -1px -1px 2px hsl(49, 98%, 50%),
