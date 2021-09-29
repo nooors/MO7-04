@@ -1,3 +1,4 @@
+"use strict";
 // ... "spread operator" means every element of the list
 const ratingStars = [...document.getElementsByClassName("star__icon")];
 const container = document.getElementById("container");
@@ -10,7 +11,7 @@ function turnOnOffStars(stars) {
 
     container.addEventListener("click", (e) => {
         if (e.target.className === "rating"){
-            for(element of ratingStars){
+            for(let element of ratingStars){
                 element.className = starClassOff;
             }
         }
